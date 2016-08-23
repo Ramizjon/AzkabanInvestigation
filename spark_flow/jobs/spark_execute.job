@@ -1,0 +1,3 @@
+# spark_execute.job
+type=command
+command=spark-submit --class Main --master local /home/cloudera/deploy-spark/unifier.jar -n ${nexus_input_path} -f ${facebook_input_path} -o ${output_path}

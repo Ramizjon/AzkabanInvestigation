@@ -1,0 +1,6 @@
+# hive_facebook.jobs
+type=hive
+dependencies=spark_execute
+user.to.proxy=cloudera
+classpath=./*,./lib/*,${hadoop.home}/*,${hadoop.home}/lib/*,${hive.home}/lib/*
+hive.query.file=scripts/hive_facebook.hql

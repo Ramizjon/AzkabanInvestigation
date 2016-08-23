@@ -1,0 +1,6 @@
+type=flow
+flow.name=spark_execute
+nexus_input_path=/user/cloudera/input/nexus/2016-03-27/1900
+facebook_input_path=/user/cloudera/input/input_facebook_spark/2016-03-27/0100
+output_path=/user/cloudera/spark_output/out18
+
