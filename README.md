@@ -1,12 +1,13 @@
 # AzkabanInvestigation
 
-**AzkabanInvestigation** is a project that performs job's scheduling using Azkaban product.
+**Azkaban** is a batch workflow job scheduler created at LinkedIn to run Hadoop jobs. Azkaban resolves the ordering through job dependencies and provides an easy to use web user interface to maintain and track your workflows.
 
-## Spark flow should include following jobs:
+**AzkabanInvestigation** is a project that performs job's scheduling using Azkaban product for Spark workflow.
+
+## Spark workflow should include following jobs:
 - Launch Spark application. Spark application is executed by using `command` jobtype, that uses `spark-submit` command in order to launch Spark application.
 - Load output results of Spark application into Hive table. Hive query is executed by using `hive` jobtype, that references to folder with scripts, that are intended to be executed.
 - Extract data from Hive and load it in Vertica database.
-
 
 ## Installation
 
