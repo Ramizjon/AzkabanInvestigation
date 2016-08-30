@@ -2,13 +2,13 @@
 
 **AzkabanInvestigation** is a project that performs job's scheduling using Azkaban product.
 
-### Spark flow should include following jobs:
+## Spark flow should include following jobs:
 - Launch Spark application. Spark application is executed by using `command` jobtype, that uses `spark-submit` command in order to launch Spark application.
 - Load output results of Spark application into Hive table. Hive query is executed by using `hive` jobtype, that references to folder with scripts, that are intended to be executed.
 - Extract data from Hive and load it in Vertica database.
 
 
-### Installation
+## Installation
 
 In order to launch described workflow, you have to install Azkaban and apply some plugins to it.
 To install Azkaban solo-server you need:
@@ -33,13 +33,13 @@ After successful execution you'll be able to view all stats regarding executed w
 
 ![Screenshot 2] (https://s3.postimg.org/o7i2on377/Screenshot_at_Aug_23_18_55_18.png)
 
-###Dependencies pipeline
+## Dependencies pipeline
 
 In order to view dependencies pipeline you have to click on flow's name in project's flows list. Graph with job's dependencies will be shown.
 
 ![Screenshot 3] (https://s18.postimg.org/m1uvcam1l/Screenshot_at_Aug_29_18_14_59.png)
 
-###Big picture
+## Big picture
 
 Azkaban allows users to view whole history of workflows in any type of status. Workflow list is available under "History" section of Azkaban dashboard.
 
@@ -65,7 +65,7 @@ If you want to **re-run particular job only**, you have to do following:
 
 ![Screenshot 7] (https://s17.postimg.org/t6llffkhb/Screenshot_at_Aug_29_18_57_50.png)
 
-##Job configurations
+## Job configurations
 
 **Runtime properties**
 
@@ -99,7 +99,7 @@ In order to use parameter substitution in .job files use following syntax:
     param2=${myparameter} # will equal "ramizjon"
     
 
-##Comparing Azkaban and Oozie (main differences)
+## Comparing Azkaban and Oozie (main differences)
 
 **Supported types of actions out of the box**
 
@@ -133,7 +133,7 @@ In order to use parameter substitution in .job files use following syntax:
 - Azkaban, on failure all running workflows are lost
 - Oozie, running workflows continue running from their current state
 
-##Personal opinion
+## Personal opinion
 
 After performing investigation of Azkaban, i've got an opinion that using Oozie in conjunction with [Celos](https://github.com/collectivemedia/celos) is more functional. As this bundle is more flexible, supports different types of triggers, not only time-based, more scheduling strategies, more job types out of the box without need to install external plugins, better documentation etc.
 
