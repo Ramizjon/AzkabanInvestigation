@@ -4,7 +4,7 @@
 
 **AzkabanInvestigation** is a project that performs job's scheduling using Azkaban product for Spark workflow.
 
-## Spark workflow should include following jobs:
+### Spark workflow should include following jobs:
 - Launch Spark application. Spark application is executed by using `command` jobtype, that uses `spark-submit` command in order to launch Spark application.
 - Load output results of Spark application into Hive table. Hive query is executed by using `hive` jobtype, that references to folder with scripts, that are intended to be executed.
 - Extract data from Hive and load it in Vertica database.
@@ -33,6 +33,8 @@ In order to schedule workflow, hit `Schedule/Execute flow` button and determine 
 After successful execution you'll be able to view all stats regarding executed workflow.
 
 ![Screenshot 2] (https://s3.postimg.org/o7i2on377/Screenshot_at_Aug_23_18_55_18.png)
+
+# Overview
 
 ## Dependencies pipeline
 
